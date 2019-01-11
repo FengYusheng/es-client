@@ -3,7 +3,7 @@ package com.fys.esclient;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class TestJUnit {
+public class git sTestJUnit {
     @Test
     public void testAdd() {
         String str = "JUnit is working fine.";
