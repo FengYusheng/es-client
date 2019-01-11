@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="81233ac2-9354-4eb3-82f3-68500f428f3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,19 +17,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+            <state relative-caret-position="551">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,8 +31,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="184">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -61,10 +72,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/fys/esclient/TestJUnit.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESClient.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/fys/esclient/QueryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" />
       </list>
     </option>
@@ -153,8 +164,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547200452257" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547212354720" />
+    <property name="last_opened_file_path" value="/usr/lib/jvm/java-1.11.0-openjdk-amd64" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RunAnythingCache">
@@ -176,9 +190,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ESClient">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fys.esclient.App" />
+  <component name="RunManager" selected="JUnit.ESQueryBuilderTest">
+    <configuration name="ESClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fys.esclient.ESClient" />
       <module name="es-client" />
       <extension name="coverage">
         <pattern>
@@ -190,8 +204,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ESClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fys.esclient.ESClient" />
+    <configuration name="ESQueryBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fys.esclient.ESQueryBuilder" />
       <module name="es-client" />
       <extension name="coverage">
         <pattern>
@@ -218,6 +232,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ESQueryBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="es-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fys.esclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fys.esclient" />
+      <option name="MAIN_CLASS_NAME" value="com.fys.esclient.ESQueryBuilderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SuiteClasses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="es-client" />
       <extension name="coverage">
@@ -235,10 +264,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ESQueryBuilderTest" />
+        <item itemvalue="Application.ESQueryBuilder" />
         <item itemvalue="Application.ESClient" />
         <item itemvalue="JUnit.SuiteClasses" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +291,24 @@
     </history-entry>
     <history-entry file="SuiteClasses - 2019.01.11 at 12h 54m 50s.xml">
       <configuration name="SuiteClasses" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 00m 23s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 26m 49s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 27m 31s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 29m 19s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 43m 19s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ESQueryBuilderTest - 2019.01.11 at 20h 53m 20s.xml">
+      <configuration name="ESQueryBuilderTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -285,7 +333,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854578" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946523" weight="0.9453125" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005348" side_tool="true" weight="0.2064632" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.47576302" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.47544643" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -294,7 +342,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" x="0" y="0" width="291" height="494" id="Documentation" order="8" side_tool="true" weight="0.24088146" />
+      <window_info anchor="right" x="0" y="0" width="291" height="494" id="Documentation" order="8" side_tool="true" visible="true" weight="0.24064171" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -339,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/QueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -360,33 +401,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.5.4/elasticsearch-6.5.4.jar!/org/elasticsearch/index/query/MatchAllQueryBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.5.4/elasticsearch-6.5.4.jar!/org/elasticsearch/index/query/QueryBuilders.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        <state relative-caret-position="456">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        <state relative-caret-position="551">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        <state relative-caret-position="184">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>es-client</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.carrotsearch.randomizedtesting:randomizedtesting-runner:2.6.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
