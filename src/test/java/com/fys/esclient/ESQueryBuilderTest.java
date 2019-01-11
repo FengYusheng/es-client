@@ -6,8 +6,8 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
-import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*;
 import org.junit.Test;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -18,7 +18,6 @@ import java.io.IOException;
 public class ESQueryBuilderTest {
     private static RestHighLevelClient client;
     private static final String index = "bank";
-    private SearchRequest searchRequest;
 
     @BeforeClass
     public static void beforeClass() {
@@ -41,27 +40,15 @@ public class ESQueryBuilderTest {
     }
 
     @Test
-    public void testCase1() {
-        System.out.println("Test Case 1");
-    }
-
-    @Test
-    public void testCase2() {
-        System.out.println("Test Case 2");
-    }
-
-    @Test
-    public void testMatchAll() {
-        searchRequest = new SearchRequest(index);
-        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        searchSourceBuilder.query(ESQueryBuilder.matchAll());
-        searchSourceBuilder.from(0);
-        searchSourceBuilder.size(0);
-        searchRequest.source(searchSourceBuilder);
+    public void test_match_all() {
+        SearchRequest searchRequest = new SearchRequest(index);
+        SearchSourceBuilder sourceBuilder = ESQueryBuilder.matchAll();
+        searchRequest.source(sourceBuilder);
 
         try {
             SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
-            System.out.println(response.toString());
+            assertHitCount(response, 1000);
+            assertNoFailures(response);
         } catch (IOException e) {
             e.printStackTrace();
         }

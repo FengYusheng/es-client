@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81233ac2-9354-4eb3-82f3-68500f428f3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" afterDir="false" />
     </list>
@@ -14,31 +15,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="266">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="279">
+              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +74,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/fys/esclient/QueryBuilder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java" />
       </list>
     </option>
   </component>
@@ -166,7 +163,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547214468858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547217246273" />
     <property name="last_opened_file_path" value="/usr/lib/jvm/java-1.11.0-openjdk-amd64" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -350,7 +347,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" x="0" y="0" width="291" height="494" id="Documentation" order="8" side_tool="true" visible="true" weight="0.24064171" />
+      <window_info anchor="right" x="0" y="0" width="291" height="494" id="Documentation" order="8" side_tool="true" visible="true" weight="0.1315508" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -444,28 +441,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        <state relative-caret-position="266">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="279">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
           </folding>
         </state>
       </provider>
