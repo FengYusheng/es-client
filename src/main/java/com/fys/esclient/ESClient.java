@@ -1,9 +1,12 @@
 package com.fys.esclient;
 
-
 import org.apache.http.HttpHost;
+import org.elasticsearch.action.search.SearchRequest;
+import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 import java.io.IOException;
 
@@ -16,10 +19,22 @@ public class ESClient {
                 )
         );
 
-       try {
+        SearchRequest searchRequest = new SearchRequest();
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        searchSourceBuilder.query(QueryBuilders.matchAllQuery());
+        searchRequest.source(searchSourceBuilder);
+
+        try {
+            client.search(searchRequest, RequestOptions.DEFAULT);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
            client.close();
-       } catch (IOException e) {
-           System.out.println("Failed to close es-client");
-       }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
