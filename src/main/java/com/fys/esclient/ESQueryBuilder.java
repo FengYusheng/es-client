@@ -14,6 +14,43 @@ public class ESQueryBuilder {
         return sourceBuilder;
     }
 
+    public static SearchSourceBuilder myRangeQuery() {
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        sourceBuilder.from(0);
+        sourceBuilder.size(0);
+        sourceBuilder.query(
+                rangeQuery("year")
+                .from("2000")
+                .to("2018")
+                .includeLower(true)
+                .includeUpper(true)
+        );
+        return sourceBuilder;
+    }
+
+    public static SearchSourceBuilder myConstantScoreQuery() {
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        sourceBuilder.from(0);
+        sourceBuilder.size(0);
+        sourceBuilder.query(
+                constantScoreQuery(
+                        boolQuery()
+                        .must(
+                                rangeQuery("year")
+                                .from(2000)
+                                .to(2018)
+                                .includeUpper(true)
+                                .includeLower(true)
+                        )
+                        .must(
+                                matchQuery("email", "@pyrami.com")
+                        )
+                )
+        );
+
+        return sourceBuilder;
+    }
+
     public static void main(String[] args) {
         System.out.println("ES Query DSL Builder");
     }

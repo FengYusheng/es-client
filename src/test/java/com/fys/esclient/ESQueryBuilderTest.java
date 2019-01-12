@@ -53,4 +53,18 @@ public class ESQueryBuilderTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void test_range_query() {
+        SearchRequest searchRequest = new SearchRequest(index);
+        SearchSourceBuilder sourceBuilder = ESQueryBuilder.myRangeQuery();
+        searchRequest.source(sourceBuilder);
+        System.out.println(sourceBuilder.toString());
+    }
+
+    @Test
+    public void test_constant_score_query() {
+        SearchSourceBuilder sourceBuilder = ESQueryBuilder.myConstantScoreQuery();
+        System.out.println(sourceBuilder.toString());
+    }
 }
