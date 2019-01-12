@@ -1,5 +1,9 @@
 package com.fys.esclient;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -12,6 +16,7 @@ import org.junit.Test;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -55,16 +60,17 @@ public class ESQueryBuilderTest {
     }
 
     @Test
-    public void test_range_query() {
-        SearchRequest searchRequest = new SearchRequest(index);
-        SearchSourceBuilder sourceBuilder = ESQueryBuilder.myRangeQuery();
-        searchRequest.source(sourceBuilder);
-        System.out.println(sourceBuilder.toString());
-    }
-
-    @Test
-    public void test_constant_score_query() {
-        SearchSourceBuilder sourceBuilder = ESQueryBuilder.myConstantScoreQuery();
-        System.out.println(sourceBuilder.toString());
+    public void test_generate_expected_query() {
+        SearchSourceBuilder sourceBuilder = ESQueryBuilder.generateQuery();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(sourceBuilder.toString());
+        try {
+            FileWriter writer = new FileWriter("query.json");
+            writer.write(gson.toJson(je));
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

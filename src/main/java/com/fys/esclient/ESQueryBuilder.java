@@ -31,7 +31,7 @@ public class ESQueryBuilder {
         return sourceBuilder;
     }
 
-    public static SearchSourceBuilder myConstantScoreQuery() {
+    public static SearchSourceBuilder generateQuery() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.from(0);
         sourceBuilder.size(0);
