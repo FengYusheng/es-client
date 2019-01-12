@@ -9,28 +9,6 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class ESQueryBuilder {
 
-    public static SearchSourceBuilder matchAll() {
-        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
-        sourceBuilder.query(matchAllQuery());
-        sourceBuilder.from(0);
-        sourceBuilder.size(0);
-        return sourceBuilder;
-    }
-
-    public static SearchSourceBuilder myRangeQuery() {
-        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
-        sourceBuilder.from(0);
-        sourceBuilder.size(0);
-        sourceBuilder.query(
-                rangeQuery("year")
-                .from("2000")
-                .to("2018")
-                .includeLower(true)
-                .includeUpper(true)
-        );
-        return sourceBuilder;
-    }
-
     public static SearchSourceBuilder generateQuery() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.from(0);
