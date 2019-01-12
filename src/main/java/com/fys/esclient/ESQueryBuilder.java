@@ -4,9 +4,8 @@ package com.fys.esclient;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 import org.apache.lucene.search.join.ScoreMode;
-import org.elasticsearch.search.aggregations.BucketOrder;
+import org.elasticsearch.search.aggregations.*;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.elasticsearch.search.aggregations.AggregationBuilders;
 
 public class ESQueryBuilder {
 
@@ -64,7 +63,16 @@ public class ESQueryBuilder {
                 .field("categories")
                 .size(25)
                 .shardSize(500)
-                .order(BucketOrder.count(false))
+                .order(BucketOrder.aggregation("TIMES_CITED", false))
+                .collectMode(Aggregator.SubAggCollectionMode.BREADTH_FIRST)
+                .subAggregation(
+                        AggregationBuilders.avg("IMPACT")
+                        .field("timescited")
+                )
+                .subAggregation(
+                        AggregationBuilders.sum("TIMES_CITED")
+                        .field("timescited")
+                )
         );
 
         return sourceBuilder;
