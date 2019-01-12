@@ -2,6 +2,8 @@ package com.fys.esclient;
 
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
+
+import org.apache.lucene.search.join.ScoreMode;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class ESQueryBuilder {
@@ -43,7 +45,14 @@ public class ESQueryBuilder {
                                 .includeLower(true)
                         )
                         .must(
-                                matchQuery("email", "@pyrami.com")
+                                nestedQuery(
+                                        "people",
+                                        termsQuery(
+                                                "people.full_name",
+                                                "David","Cane"
+                                        ),
+                                        ScoreMode.None
+                                )
                         )
                 )
         );
