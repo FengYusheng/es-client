@@ -4,7 +4,9 @@ package com.fys.esclient;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 import org.apache.lucene.search.join.ScoreMode;
+import org.elasticsearch.search.aggregations.BucketOrder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
 
 public class ESQueryBuilder {
 
@@ -55,6 +57,14 @@ public class ESQueryBuilder {
                                 )
                         )
                 )
+        );
+
+        sourceBuilder.aggregation(
+                AggregationBuilders.terms("CATEGORY_TERMS")
+                .field("categories")
+                .size(25)
+                .shardSize(500)
+                .order(BucketOrder.count(false))
         );
 
         return sourceBuilder;
