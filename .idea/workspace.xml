@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81233ac2-9354-4eb3-82f3-68500f428f3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fys/esclient/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fys/esclient/ESClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fys/esclient/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +14,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
+            <state relative-caret-position="610">
               <caret line="39" column="59" lean-forward="true" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/query.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-513" />
           </provider>
         </entry>
       </file>
@@ -146,7 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547303209389" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547303574887" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.5.4/elasticsearch-6.5.4.jar!/" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -301,9 +306,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1033" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22139038" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22139038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -319,7 +323,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854578" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946523" weight="0.94308037" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49946523" visible="true" weight="0.94308037" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005348" side_tool="true" weight="0.20364238" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.4921875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -455,9 +459,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/query.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/fys/esclient/ESQueryBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -488,12 +489,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fys/esclient/ESQueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
+        <state relative-caret-position="610">
           <caret line="39" column="59" lean-forward="true" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513" />
       </provider>
     </entry>
   </component>
