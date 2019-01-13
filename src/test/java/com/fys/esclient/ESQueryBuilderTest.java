@@ -51,12 +51,6 @@ public class ESQueryBuilderTest {
     }
 
     @Test
-    public void test_create_a_search_source_builder_case_2() {
-        ESQueryBuilder queryBuilder = new ESQueryBuilder();
-        assertTrue(queryBuilder.searchSource() instanceof SearchSourceBuilder);
-    }
-
-    @Test
     public void test_set_and_get_a_search_source_builder() {
         ESQueryBuilder queryBuilder = new ESQueryBuilder();
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
