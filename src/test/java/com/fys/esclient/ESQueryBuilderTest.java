@@ -60,7 +60,22 @@ public class ESQueryBuilderTest {
     public void test_set_and_get_a_search_source_builder() {
         ESQueryBuilder queryBuilder = new ESQueryBuilder();
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
-        queryBuilder.setSearchSource(sourceBuilder);
+        queryBuilder.searchSource(sourceBuilder);
         assertSame(sourceBuilder, queryBuilder.searchSource());
+    }
+
+    @Test
+    public void test_set_search_result_range() {
+        ESQueryBuilder queryBuilder = new ESQueryBuilder();
+
+        int[] expected = {-1, -1};
+        int[] actual = queryBuilder.resultRange();
+        assertArrayEquals(expected, actual);
+
+        queryBuilder.resultRange(0, 5);
+        expected[0] = 0;
+        expected[1] = 5;
+        actual = queryBuilder.resultRange();
+        assertArrayEquals(expected, actual);
     }
 }

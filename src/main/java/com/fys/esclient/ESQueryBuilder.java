@@ -15,16 +15,30 @@ public class ESQueryBuilder {
     }
 
     ESQueryBuilder( SearchSourceBuilder source) {
-        setSearchSource(source);
+        searchSource(source);
     }
 
-    public void setSearchSource(SearchSourceBuilder source) {
+    public void searchSource(SearchSourceBuilder source) {
         this._source = source;
     }
 
     public SearchSourceBuilder searchSource() {
         return this._source;
     }
+
+    public void resultRange(int f, int s) {
+        this._source.from(f);
+        this._source.size(s);
+    }
+
+    public int[] resultRange() {
+        int[] range = {
+                this._source.from(),
+                this._source.size()
+        };
+        return range;
+    }
+
 
     public static SearchSourceBuilder generateQuery() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
