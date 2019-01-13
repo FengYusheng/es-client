@@ -1,4 +1,4 @@
-# Java Programming Assignmeng
+# Java Programming Assignment
 
 ## Environment
 * **IDE** : IntelliJ IDEA
