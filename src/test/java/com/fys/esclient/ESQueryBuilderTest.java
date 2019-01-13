@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.Test;
 import org.junit.AfterClass;
@@ -67,15 +68,18 @@ public class ESQueryBuilderTest {
     @Test
     public void test_set_search_result_range() {
         ESQueryBuilder queryBuilder = new ESQueryBuilder();
+        SearchSourceBuilder sourceBuilder = queryBuilder.searchSource();
 
         int[] expected = {-1, -1};
-        int[] actual = queryBuilder.resultRange();
+        int[] actual = {sourceBuilder.from(), sourceBuilder.size()};
         assertArrayEquals(expected, actual);
 
         queryBuilder.resultRange(0, 5);
         expected[0] = 0;
         expected[1] = 5;
-        actual = queryBuilder.resultRange();
+        actual[0] = sourceBuilder.from();
+        actual[1] = sourceBuilder.size();
         assertArrayEquals(expected, actual);
     }
+
 }

@@ -4,6 +4,7 @@ package com.fys.esclient;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 import org.apache.lucene.search.join.ScoreMode;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.search.aggregations.*;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
@@ -31,14 +32,10 @@ public class ESQueryBuilder {
         this._source.size(s);
     }
 
-    public int[] resultRange() {
-        int[] range = {
-                this._source.from(),
-                this._source.size()
-        };
-        return range;
-    }
 
+    public QueryBuilder query() {
+        return this._source.query();
+    }
 
     public static SearchSourceBuilder generateQuery() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
