@@ -10,6 +10,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class ESQueryBuilder {
     private SearchSourceBuilder _source;
+    private AggregationBuilder _aggregation;
 
     ESQueryBuilder() {
         this._source = new SearchSourceBuilder();
@@ -35,6 +36,19 @@ public class ESQueryBuilder {
 
     public QueryBuilder query() {
         return this._source.query();
+    }
+
+    public void query(QueryBuilder builder) {
+        this._source.query(builder);
+    }
+
+    public void aggregation(AggregationBuilder aggregation) {
+        this._aggregation = aggregation;
+        this._source.aggregation(aggregation);
+    }
+
+    public AggregationBuilder aggregation() {
+        return this._aggregation;
     }
 
     public static SearchSourceBuilder generateQuery() {
@@ -84,7 +98,4 @@ public class ESQueryBuilder {
         return sourceBuilder;
     }
 
-    public static void main(String[] args) {
-        System.out.println("ES Query DSL Builder");
-    }
 }

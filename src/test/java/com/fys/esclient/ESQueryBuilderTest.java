@@ -4,7 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.aggregations.*;
 import org.junit.Test;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -44,7 +48,7 @@ public class ESQueryBuilderTest {
 
 
     @Test
-    public void test_create_a_search_source_builder_case_1() {
+    public void test_create_a_search_source_builder() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         ESQueryBuilder queryBuilder = new ESQueryBuilder(sourceBuilder);
         assertSame(sourceBuilder, queryBuilder.searchSource());
@@ -75,4 +79,19 @@ public class ESQueryBuilderTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void test_set_and_get_query() {
+        ESQueryBuilder queryBuilder = new ESQueryBuilder();
+        MatchAllQueryBuilder query = QueryBuilders.matchAllQuery();
+        queryBuilder.query(query);
+        assertSame(query, queryBuilder.query());
+    }
+
+    @Test
+    public void test_set_and_get_aggregation() {
+        ESQueryBuilder queryBuilder = new ESQueryBuilder();
+        TermsAggregationBuilder aggregationBuilder = AggregationBuilders.terms("TEST");
+        queryBuilder.aggregation(aggregationBuilder);
+        assertSame(aggregationBuilder, queryBuilder.aggregation());
+    }
 }
