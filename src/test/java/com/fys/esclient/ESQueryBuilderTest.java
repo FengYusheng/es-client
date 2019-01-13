@@ -77,23 +77,23 @@ public class ESQueryBuilderTest {
     public void test_produce_expected_query() {
         ConstantScoreQueryBuilder query_ = new ConstantScoreQueryBuilder(
                 boolQuery()
-                        .must(
-                                rangeQuery("year")
-                                        .from(2000)
-                                        .to(2018)
-                                        .includeUpper(true)
-                                        .includeLower(true)
+                .must(
+                        rangeQuery("year")
+                                .from(2000)
+                                .to(2018)
+                                .includeUpper(true)
+                                .includeLower(true)
+                )
+                .must(
+                        nestedQuery(
+                                "people",
+                                termsQuery(
+                                        "people.full_name",
+                                        "David","Cane"
+                                ),
+                                ScoreMode.None
                         )
-                        .must(
-                                nestedQuery(
-                                        "people",
-                                        termsQuery(
-                                                "people.full_name",
-                                                "David","Cane"
-                                        ),
-                                        ScoreMode.None
-                                )
-                        )
+                )
         );
 
         TermsAggregationBuilder agg_ = AggregationBuilders.terms("CATEGORY_TERMS")
@@ -115,6 +115,7 @@ public class ESQueryBuilderTest {
         ESQueryBuilder queryBuilder = new ESQueryBuilder();
         queryBuilder.query(query_);
         queryBuilder.aggregation(agg_);
+        queryBuilder.resultRange(0,0);
         assertSame(queryBuilder.query(), query_);
         assertSame(queryBuilder.aggregation(), agg_);
 
