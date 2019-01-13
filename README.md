@@ -8,5 +8,4 @@
 
 ## Description
 This code only produces the query DSL and save the query language in the file `query.json`.
-I treat the unit test as a `main` function for now, as there are many hard codes
-in the source file.
+

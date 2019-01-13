@@ -1,9 +1,5 @@
 package com.fys.esclient;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import org.apache.lucene.search.join.ScoreMode;
 import org.elasticsearch.index.query.ConstantScoreQueryBuilder;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
