@@ -4,19 +4,18 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import org.apache.lucene.search.join.ScoreMode;
+import org.elasticsearch.index.query.ConstantScoreQueryBuilder;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.aggregations.*;
+import static org.elasticsearch.index.query.QueryBuilders.*;
 import org.junit.Test;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import static org.junit.Assert.*;
-
-import java.io.FileWriter;
-import java.io.IOException;
-
 
 public class ESQueryBuilderTest {
 
@@ -29,23 +28,6 @@ public class ESQueryBuilderTest {
     public static void afterClass() {
         System.out.println("Test ends.");
     }
-
-
-    @Test
-    public void test_generate_expected_query() {
-        SearchSourceBuilder sourceBuilder = ESQueryBuilder.generateQuery();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonParser jp = new JsonParser();
-        JsonElement je = jp.parse(sourceBuilder.toString());
-        try {
-            FileWriter writer = new FileWriter("query.json");
-            writer.write(gson.toJson(je));
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @Test
     public void test_create_a_search_source_builder() {
@@ -93,5 +75,54 @@ public class ESQueryBuilderTest {
         TermsAggregationBuilder aggregationBuilder = AggregationBuilders.terms("TEST");
         queryBuilder.aggregation(aggregationBuilder);
         assertSame(aggregationBuilder, queryBuilder.aggregation());
+    }
+
+    @Test
+    public void test_produce_expected_query() {
+        ConstantScoreQueryBuilder query_ = new ConstantScoreQueryBuilder(
+                boolQuery()
+                        .must(
+                                rangeQuery("year")
+                                        .from(2000)
+                                        .to(2018)
+                                        .includeUpper(true)
+                                        .includeLower(true)
+                        )
+                        .must(
+                                nestedQuery(
+                                        "people",
+                                        termsQuery(
+                                                "people.full_name",
+                                                "David","Cane"
+                                        ),
+                                        ScoreMode.None
+                                )
+                        )
+        );
+
+        TermsAggregationBuilder agg_ = AggregationBuilders.terms("CATEGORY_TERMS")
+                .field("categories")
+                .size(25)
+                .shardSize(500)
+                .order(BucketOrder.aggregation("TIMES_CITED", false))
+                .collectMode(Aggregator.SubAggCollectionMode.BREADTH_FIRST)
+                .subAggregation(
+                        AggregationBuilders.avg("IMPACT")
+                                .field("timescited")
+                )
+                .subAggregation(
+                        AggregationBuilders.sum("TIMES_CITED")
+                                .field("timescited")
+                );
+
+
+        ESQueryBuilder queryBuilder = new ESQueryBuilder();
+        queryBuilder.query(query_);
+        queryBuilder.aggregation(agg_);
+        assertSame(queryBuilder.query(), query_);
+        assertSame(queryBuilder.aggregation(), agg_);
+
+        queryBuilder.printQuery();
+        queryBuilder.printQuery("./query.json");
     }
 }

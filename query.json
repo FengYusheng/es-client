@@ -1,6 +1,4 @@
 {
-  "from": 0,
-  "size": 0,
   "query": {
     "constant_score": {
       "filter": {
