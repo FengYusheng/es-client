@@ -8,6 +8,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.Test;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import static org.junit.Assert.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -39,5 +40,19 @@ public class ESQueryBuilderTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Test
+    public void test_create_a_search_source_builder_case_1() {
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        ESQueryBuilder queryBuilder = new ESQueryBuilder(sourceBuilder);
+        assertSame(sourceBuilder, queryBuilder.searchSource());
+    }
+
+    @Test
+    public void test_create_a_search_source_builder_case_2() {
+        ESQueryBuilder queryBuilder = new ESQueryBuilder();
+        assertTrue(queryBuilder.searchSource() instanceof SearchSourceBuilder);
     }
 }

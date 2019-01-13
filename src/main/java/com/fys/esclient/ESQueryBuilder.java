@@ -8,6 +8,23 @@ import org.elasticsearch.search.aggregations.*;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class ESQueryBuilder {
+    private SearchSourceBuilder _source;
+
+    ESQueryBuilder() {
+        this._source = new SearchSourceBuilder();
+    }
+
+    ESQueryBuilder( SearchSourceBuilder source) {
+        setSearchSource(source);
+    }
+
+    public void setSearchSource(SearchSourceBuilder source) {
+        this._source = source;
+    }
+
+    public SearchSourceBuilder searchSource() {
+        return this._source;
+    }
 
     public static SearchSourceBuilder generateQuery() {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
